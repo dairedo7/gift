@@ -1,0 +1,201 @@
+body {
+  background-color: rgb(98, 158, 247);
+  font-family: "Montserrat", sans-serif;
+  color: rgb(150, 214, 55);
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 75px;
+  border: 5px dashed red;
+  text-decoration: underline;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  padding: 15px;
+
+  transition-duration: 2000ms;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.header__title:hover {
+  transform: skew(175deg, -5deg);
+  color: rgb(236, 54, 9);
+  border: 5px groove rgb(150, 214, 55);
+}
+
+.header__subtitle {
+  color: rgb(127, 47, 255);
+  font-weight: 800;
+  font-size: 55px;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.header__subtitle:hover {
+  color: rgb(236, 54, 9);
+}
+
+.header__subtitle:hover::after {
+  content: "Watch the video to the very END!";
+  text-decoration: underline;
+  color: red;
+  transform: skew(5deg, 180deg);
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+
+  width: 200px;
+  padding: 10px 10px;
+  margin-top: 30px;
+
+  background: rgb(154, 91, 255);
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 15%);
+  border-radius: 4px;
+
+  transition-duration: 500ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn--link {
+  text-decoration: none;
+  color: white;
+}
+.btn:hover,
+.btn:focus {
+  background: #8f02ee;
+}
+
+.btn--download {
+  background: transparent;
+}
+
+.icon--download,
+.icon--switch {
+  fill: white;
+}
+
+.btn--download:hover,
+.btn--switch:hover {
+  color: red;
+  fill: red;
+}
+
+.btn__icon {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+}
+
+.icon--switch {
+  left: 30px;
+  top: 7px;
+}
+
+/* Backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 4px;
+  width: 420px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+}
+
+.modal__video {
+  margin-left: -40px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-btn__icon:hover {
+  fill: red;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .header__title {
+    margin-left: 10px;
+    font-size: 65px;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+  }
+  .backdrop {
+    padding: 0;
+  }
+
+  .modal {
+    position: absolute;
+    width: 375px;
+  }
+  .modal__video {
+    width: 370px;
+  }
+  .btn--download {
+    margin-bottom: 50px;
+  }
+}
