@@ -209,6 +209,10 @@ body {
   color: #fff;
 }
 
+.span--text {
+  margin-left: 25px;
+}
+
 @media screen and (max-width: 480px) {
   .header__title {
     margin-left: 10px;
@@ -232,6 +236,10 @@ body {
   }
   .play-btn {
     padding-left: 15px;
+  }
+
+  .span--text {
+    margin-left: 0;
   }
   .modal {
     position: absolute;
