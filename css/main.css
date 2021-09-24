@@ -190,9 +190,25 @@ body {
   display: flex;
   justify-content: space-around;
   font-size: 77px;
-
   cursor: pointer;
+
+  transition-duration: 500ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.fa.fa-play:hover,
+.fa.fa-pause:hover,
+.fa.fa-stop:hover {
+  color: red;
+}
+
+.fa.fa-play:active,
+.fa.fa-pause:active,
+.fa.fa-stop:active {
+  color: #fff;
+}
+
 @media screen and (max-width: 480px) {
   .header__title {
     margin-left: 10px;
@@ -206,6 +222,17 @@ body {
     padding: 0;
   }
 
+  .fa.fa-play,
+  .fa.fa-pause,
+  .fa.fa-stop {
+    display: flex;
+    flex-direction: column;
+    font-size: 45px;
+    text-align: center;
+  }
+  .play-btn {
+    padding-left: 15px;
+  }
   .modal {
     position: absolute;
     width: 375px;
