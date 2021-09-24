@@ -175,6 +175,24 @@ body {
   visibility: hidden;
 }
 
+.play-btn {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.play-btn--el {
+  width: 80px;
+}
+.fa.fa-play,
+.fa.fa-pause,
+.fa.fa-stop {
+  display: flex;
+  justify-content: space-around;
+  font-size: 77px;
+
+  cursor: pointer;
+}
 @media screen and (max-width: 480px) {
   .header__title {
     margin-left: 10px;

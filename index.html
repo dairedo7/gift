@@ -46,7 +46,22 @@
     <!-- <video autoplay muted loop id="myVideo">
         <source src="[AniDub] BLack Clover - 136.mp4" type="video/mp4">
     </video> -->
-
+    <audio style="visibility:hidden;" id="record" autoplay controls loop>
+        <source src="record.mp3" type="audio/mpeg">
+    </audio>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <ul class="play-btn">
+        <li class="play-btn--el">
+            <a><i class="fa fa-play" aria-hidden="true" id="playBtn"> Start</i></a>
+        </li>
+        <li class="play-btn--el">
+            <a><i class="fa fa-pause" aria-hidden="true" id="pauseBtn"> Pause</i></a>
+        </li>
+        <li class="play-btn--el">
+            <a><i class="fa fa-stop" aria-hidden="true" id="stopBtn"> Stop</i></a>
+        </li>
+    </ul>
     <section class="video-section">
         <div class="features">
             <button class="btn btn--switch" type="button" data-modal-open>
@@ -74,7 +89,7 @@
             </button>
             <video class="modal__video" width="400" height="240" controls autoplay loop allowfullscreen
                 allow="accelerometer; autoplay; clipboard-write">
-                <source src="[AniDub] BLack Clover - 136.mp4" type="video/mp4">
+                <source src="#" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
