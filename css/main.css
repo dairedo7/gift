@@ -162,15 +162,39 @@ body {
   transform: translate(-50%, -50%);
   padding: 40px;
   border-radius: 4px;
-  width: 420px;
+  width: 1280px;
+  height: 820px;
 
   background-color: #fff;
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
 }
-
 .modal__video {
+  width: 1280px;
+  height: 720px;
+}
+.modal-open {
+  overflow: hidden;
+}
+
+.video {
   margin-left: -40px;
+}
+
+.visually-hidden {
+  display: none;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visually-shown {
+  display: block;
+  opacity: 1;
+  pointer-events: initial;
+  visibility: initial;
+  width: 360px;
+  height: 220px;
 }
 
 .modal__close-btn {
@@ -266,6 +290,11 @@ body {
   .audio-section {
     background: url(https://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-HallmarkUS-Library/default/dw6225f924/08-19-21-new-birthday-fcat-card.jpg?sw=416);
   }
+  .modal__video {
+    width: 360px;
+    height: 320px;
+  }
+
   .play-btn {
     flex-direction: column;
     justify-content: center;
@@ -300,6 +329,7 @@ body {
     margin-bottom: 150px;
     font-size: 40px;
   }
+
   .header__title:hover {
     margin-left: 8%;
     margin-top: 5%;
@@ -345,11 +375,17 @@ body {
     margin-left: 0;
   }
   .modal {
-    position: absolute;
+    position: relative;
     width: 375px;
+    height: 450px;
   }
+
   .modal__video {
-    width: 370px;
+    position: absolute;
+    margin-left: 0;
+    top: 270px;
+    left: 0;
+    transform: translate(5px, -175px);
   }
   .btn--download {
     margin-bottom: 50px;

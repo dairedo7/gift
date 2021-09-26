@@ -47,7 +47,7 @@
         <source src="[AniDub] BLack Clover - 136.mp4" type="video/mp4">
     </video> -->
     <section class="audio-section">
-        <audio style="visibility:hidden;" id="record" controls loop>
+        <audio style="visibility:hidden;" id="record" controls>
             <source src="record.mp3" type="audio/mpeg">
         </audio>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
@@ -71,7 +71,7 @@
                 <svg class="btn__icon icon--switch" width="32" height="32">
                     <use href="#icon-switch"></use>
                 </svg>
-                <span class="btn__text">Watch</span>
+                <span onclick="functionOpen()" class="btn__text">Watch</span>
             </button>
             <a class="btn--link" href="Significant-insights_2.docx" download="Significant-insights">
                 <button class=" btn btn--download" type="button">
@@ -85,16 +85,20 @@
     </section>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="close-btn modal__close-btn" type="button" data-modal-close>
+            <button onclick="functionClose()" class="close-btn modal__close-btn" type="button" data-modal-close>
                 <svg class="close-btn__icon" width="24" height="24">
                     <use href="#icon-close"></use>
                 </svg>
             </button>
-            <video class="modal__video" width="400" height="240" controls autoplay loop allowfullscreen
-                allow="accelerometer; autoplay; clipboard-write">
-                <source src="#" type="video/mp4">
+            <video class="modal__video" controls allowfullscreen allow="accelerometer; autoplay; clipboard-write">
+                <source src="Birthday_present.mp4" type="video/mp4">
                 Your browser does not support the video.
             </video>
+            <!-- <video class="video" width="1280" height="720" controls autoplay allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write">
+                <source src="Birthday_present.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video> -->
         </div>
     </div>
     <script src='js/main.js'></script>
