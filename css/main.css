@@ -113,6 +113,9 @@ body {
   fill: white;
 }
 
+.download__text {
+  padding-left: 37px;
+}
 .btn--download:hover,
 .btn--switch:hover {
   color: red;
@@ -126,6 +129,11 @@ body {
 }
 
 .icon--switch {
+  left: 30px;
+  top: 7px;
+}
+
+.icon--download {
   left: 30px;
   top: 7px;
 }
