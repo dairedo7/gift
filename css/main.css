@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(98, 158, 247);
+  background-color: rgb(230, 53, 53);
   font-family: "Montserrat", sans-serif;
   color: rgb(150, 214, 55);
 }
@@ -13,13 +13,24 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
 
+.header {
+  background-image: url(../images/viber_image_2021-09-25_19-21-43-624.jpg);
+  background-size: 1600px 1600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 900px;
+}
+
 .header__title {
-  font-size: 75px;
+  font-size: 60px;
   border: 5px dashed red;
   text-decoration: underline;
   margin-top: 100px;
@@ -37,15 +48,19 @@ body {
 }
 
 .header__subtitle {
-  color: rgb(127, 47, 255);
+  color: rgb(255, 255, 255);
   font-weight: 800;
   font-size: 55px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: oblique;
+  text-transform: capitalize;
+  box-shadow: rgba(219, 198, 184, 0.56) 0px 22px 70px 4px;
   transition-duration: 1000ms;
   transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .header__subtitle:hover {
-  color: rgb(236, 54, 9);
+  color: rgb(56, 155, 248);
 }
 
 .header__subtitle:hover::after {
@@ -69,6 +84,7 @@ body {
   width: 200px;
   padding: 10px 10px;
   margin-top: 30px;
+  margin-bottom: 20px;
 
   background: rgb(154, 91, 255);
   color: #fff;
@@ -197,26 +213,91 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fa.fa-play:hover,
-.fa.fa-pause:hover,
-.fa.fa-stop:hover {
-  color: red;
+.fa:before {
+  opacity: 0.7;
+
+  margin: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+}
+
+.span--text {
+  color: bisque;
+  font-weight: 800;
+}
+
+.fa {
+  color: bisque;
+}
+.fa:hover {
+  color: #fff;
+}
+
+.span--text:hover {
+  color: white;
 }
 
 .fa.fa-play:active,
 .fa.fa-pause:active,
 .fa.fa-stop:active {
-  color: #fff;
+  color: white;
+  opacity: 0;
 }
 
 .span--text {
   margin-left: 25px;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    background-image: url(../images/viber_image_2021-09-25_19-16-00-109.jpg);
+    background-position: 70% 50%;
+    background-repeat: no-repeat;
+    padding-bottom: 0px;
+    background-size: unset;
+  }
+  .audio-section {
+    background: url(https://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-HallmarkUS-Library/default/dw6225f924/08-19-21-new-birthday-fcat-card.jpg?sw=416);
+  }
+  .play-btn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .play-btn--el {
+    margin-bottom: 20px;
+  }
+  .fa-play:before {
+    content: "\f04b";
+    margin-left: -60px;
+  }
+  .fa-pause:before {
+    content: "\f04c";
+    margin-left: -20px;
+  }
+  .fa-stop:before {
+    content: "\f04d";
+    margin-left: -60px;
+  }
+  .span--text {
+    margin-left: 75px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .header__title {
-    margin-left: 10px;
-    font-size: 65px;
+    max-width: 270px;
+    margin-top: 0;
+    margin-left: 9%;
+    margin-top: 2%;
+    margin-bottom: 150px;
+    font-size: 40px;
+  }
+  .header__title:hover {
+    margin-left: 8%;
+    margin-top: 5%;
+    transform: skew(175deg, -5deg);
+    color: rgb(236, 54, 9);
+    border: 5px groove rgb(150, 214, 55);
   }
   .features {
     display: flex;
@@ -235,9 +316,23 @@ body {
     text-align: center;
   }
   .play-btn {
-    padding-left: 15px;
+    padding: 0;
+    padding-left: 10px;
+    padding-bottom: 60px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
-
+  .play-btn--el {
+    margin: 0;
+  }
+  .fa-play:before,
+  .fa-pause:before,
+  .fa-stop:before {
+    content: "\f04b";
+    margin-left: 0px;
+  }
   .span--text {
     margin-left: 0;
   }
