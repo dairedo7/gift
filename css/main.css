@@ -160,7 +160,7 @@ body {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px;
+  padding-top: 40px;
   border-radius: 4px;
   width: 1280px;
   height: 820px;
@@ -289,6 +289,9 @@ body {
   }
   .audio-section {
     background: url(https://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-HallmarkUS-Library/default/dw6225f924/08-19-21-new-birthday-fcat-card.jpg?sw=416);
+  }
+  .modal {
+    padding-top: 0px;
   }
   .modal__video {
     width: 360px;

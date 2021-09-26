@@ -15,7 +15,7 @@
 })();
 
 var record = document.getElementById("record").autoplay;
-record.autoplay = true;
+record.autoplay = false;
 
 var source = "record.mp3";
 var audio = new Audio(); // use the constructor in JavaScript, just easier that way
@@ -23,7 +23,7 @@ audio.addEventListener("load", function() {
   audio.play();
 }, true);
 audio.src = source;
-audio.autoplay = true; // add this
+audio.autoplay = false; // add this
 
 $("#playBtn").click(function() {
   audio.play();
@@ -39,6 +39,15 @@ $("#stopBtn").click(function() {
 });
 
 
+// var modalVideo = document.querySelector(".modal__video");
+
+// function functionOpen() {
+//   modalVideo.classList.remove("visually-hidden");
+// }
+
+// function functionClose() {
+//   modalVideo.classList.add("visually-hidden");
+// }
 
 // audioElement = new Audio('record.mp3');
 // audioElement.addEventListener("canplay", function() {
